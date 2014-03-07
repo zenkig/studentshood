@@ -1,5 +1,7 @@
-<% provide(:title, 'Home') %>
+<div class="center hero-unit">
 <h1>Welcome to Studentshood</h1>
-<p>This is the home page for the <a href = "http:// studentshood.com">studentshood</a>
-</p>
-
+<h2>This is the home page for the <a href = "http:// studentshood.com/">studentshood</a>
+</h2>
+ <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+</div>
+<%= link_to image_tag("studentshood.png", alt: "Studentshood"), 'http://studentshood.com/' %>

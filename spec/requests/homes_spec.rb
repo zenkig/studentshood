@@ -2,45 +2,38 @@ require 'spec_helper'
 
 describe "Home page" do
 
+  subject { page }
+  
   describe "Index page" do
-
-    it "should have the content 'studentshood'" do
-      visit '/home/index'
-      expect(page).to have_content('studentshood')
-    end
+    before { visit root_path }
     
-    it "should have the title 'Home'" do
-      visit '/home/index'
-      expect(page).to have_title("Studentshood | Home")
-    end
-    
+    it { should have_content('studentshood') }
+    it { should have_title(full_title('')) }
+    it { should_not have_title('| Home') }
+        
   end
   
   describe "Help page" do
-
-    it "should have the content 'Help'" do
-      visit '/home/help'
-      expect(page).to have_content('Help')
-    end
+    before { visit help_path }
+    it { should have_content('Help') }
+    it { should have_title(full_title('Help')) }
     
-    it "should have the title 'Help'" do
-      visit '/home/help'
-      expect(page).to have_title("Studentshood | Help")
-    end
-        
   end
 
   describe "About page" do
 
-    it "should have the content 'About Us'" do
-      visit '/home/about'
-      expect(page).to have_content('About Us')
-    end
-    
-    it "should have the title 'About Us'" do
-      visit '/home/about'
-      expect(page).to have_title("Studentshood | About Us")
-    end
+    before { visit about_path }
+
+    it { should have_content('About') }
+    it { should have_title(full_title('About Us')) }
+  end
+  
+  describe "Contact page" do
+
+   before { visit contact_path }
+
+    it { should have_content('Contact') }
+    it { should have_title(full_title('Contact')) }
   end
     
 end

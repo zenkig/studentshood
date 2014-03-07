@@ -1,7 +1,10 @@
 Studentshood::Application.routes.draw do
-  get "home/index"
-  get "home/help"
-  get "home/about"
+  get "users/new"
+  root to: 'home#index'
+  match '/help',   to: 'home#help',   via: 'get'
+  match '/about',   to: 'home#about',   via: 'get'
+  match '/contact',   to: 'home#contact',   via: 'get'
+  match '/signup',  to: 'users#new',    via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
