@@ -1,7 +1,8 @@
-== README
+The service design web framework, for showing the business idea of a student community for all european students to share their knowledge and help each other with UGC.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The service is running as a framework on the website:
+https://studentshood.herokuapp.com
+
 
 Things you may want to cover:
 
